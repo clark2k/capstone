@@ -141,7 +141,7 @@
         
         
         
-      <h1>PHINMA-UI HK AttendanceTix: Professional Attendance Monitoring System</h1>
+      <h1>ITE 401 Midterm Examination</h1>
       <h2>This system is for the attendance of HK students that are assigned in the 5 departments.</h>
     </div>
   </section>
