@@ -1,0 +1,783 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(img/bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar{
+    width: 85%;
+    margin:auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 120px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+.logo:hover{
+    color:blue;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position:relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after{
+    content: "";
+    height: 3px;
+    width: 0;
+    background: blue;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover:after{
+    width: 100%;
+}
+
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.content h1{
+    font-size: 70px;
+    margin-top: 80px;
+    margin-bottom: 60px;
+}
+.content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+    font-size: 20px;
+}
+
+.content button{
+    width: 200px;
+    padding:15px 0;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid blue;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span{
+    background: black;
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span{
+    width: 100%;
+}
+button:hover{
+    border: none;
+    background-color: rgba(0, 0, 0, 0.151)
+    
+}
+/*This is the css of news*/
+
+.blog-section{
+    width: 100%;
+    background-image: linear-gradient(black,rgb(19, 19, 19), blue);
+
+}
+
+.blog-section .section-content{
+    width: 85%;
+    margin: 20px auto;
+
+}
+
+.blog-section .section-content .title{
+    width: 60%;
+    text-align: center;
+    margin: auto;
+
+}
+
+.blog-section .section-content .title h2{
+    font-size: 70px;
+    text-transform: uppercase;
+    font-family: Calibri;
+    color: white;
+
+}
+
+
+.blog-section .section-content .cards{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 100px;
+    margin: 25px auto;
+
+}
+
+.blog-section .section-content .cards .card{
+    width: 100%;
+    background-color: darkslategray;
+    position: relative;
+    box-shadow: 10px 10px 5px gray;
+}
+
+.blog-section .section-content .cards .card img{
+    width: 100%;
+    height: 250px;
+}
+
+.blog-section .section-content .cards .card .article{
+    padding: 15px 20px;
+}
+
+.blog-section .section-content .cards .card .article h4{
+    font-size: 24px;
+    color: skyblue;
+}
+
+.blog-section .section-content .cards .card .article p{
+    font-size: 14px;
+    color: white;
+    margin: 10px 0px;
+    font-family: tahoma;
+}
+
+.blog-section .section-content .cards .card .blog-view a{
+    text-decoration: none;
+    display: inline-block;
+    background-color: skyblue;
+    padding: 8px 15px;
+    margin-left: 20px;
+    color: black;
+}
+
+
+@media screen and (max-width: 992px) {
+    .blog-section .section-content .cards{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+/*This is the css of about*/
+
+.about-section{
+    padding-top: 100px;
+    padding-bottom: 200px;
+    width: 100%;
+    background-image: linear-gradient(black,rgb(19, 19, 19), blue);
+}
+
+.heading{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.heading h1{
+    font-size: 50px;
+    color: rgb(59, 5, 255);
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.heading h1::after{
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+    background-color: yellow;
+}
+
+.heading p{
+    font-size: 18px;
+    color: black;
+    margin-bottom: 35px;
+}
+
+.container{
+    width: 90%;
+    margin-bottom: 100px;
+    padding: 50px;
+}
+
+.about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-image{
+    flex: 1;
+    margin-right: 40px;
+    overflow: hidden;
+}
+
+.about-image img{
+    max-width: 50%;
+    height: 50%;
+    display: block;
+    transition: 0.5s ease;
+    margin-left: 200px;
+}
+
+.about-image:hover img{
+    transform: scale(1.2);
+}
+
+.about-content{
+    flex: 1;
+}
+
+.about-content h2{
+    font-size: 23px;
+    margin-bottom: 15px;
+    color: rgb(59, 5, 255);
+}
+
+.about-content p{
+    font-size: 18px;
+    line-height: 1.5;
+    color: white;
+}
+
+.about-content .read-more{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(59, 5, 255);
+    color: yellow;
+    font-size: 19px;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 15px;
+    transition: 0.3s ease;
+}
+
+.about-content .read-more:hover{
+    background-color: yellow;
+    color: rgb(59, 5, 255);
+}
+
+@media screen and (max-width: 760px) {
+    .heading{
+        padding: 0px 20px;
+    }
+    .heading h1{
+        font-size: 36px;
+    }
+    .heading p{
+        font-size: 17px;
+        margin-bottom: 0px;
+    }
+    .container{
+        padding: 0px;
+    }
+    .about{
+        padding: 20px;
+        flex-direction: column;
+    }
+    .about-image{
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+    .about-content{
+        padding: 0px;
+        font-size: 16px;
+    }
+    .about-content .read-more{
+        font-size: 16px;
+    }
+}
+
+/*This is the css of gallery*/
+
+.gallery{
+    padding-bottom: 50px;
+    padding-top: 10px;
+    background-image: linear-gradient(black,rgb(19, 19, 19), blue);
+}
+
+.gallery input{
+    display: none;
+}
+
+.gallery .gallery-container{
+    width: 100%;
+    text-align: center;
+}
+
+.gallery h1{
+    font-family: Arial ;
+    position: relative;
+    font-size: 35px;
+    margin: 40px 0;
+    color: blue;
+}
+
+.gallery h1::before{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: blue;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        width: 100px;
+    }
+    50%{
+        width: 200px;
+    }
+    100%{
+        width: 100px;
+    }
+}
+
+.gallery .top-content{
+    background-color: gold;
+    width: 90%;
+    margin: 0 auto 20px auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid #1E282D;
+}
+
+.gallery h3{
+    height: 100%;
+    line-height: 60px;
+    padding: 0 50px;
+    background-color: goldenrod;
+    color: white;
+}
+
+.gallery label{
+    display: inline-block;
+    height: 100%;
+    margin: 0 20px;
+    line-height: 60px;
+    font-size: 18px;
+    color: blue;
+    cursor: pointer;
+    transition: .5s;
+}
+.gallery label:hover{
+    color: white;
+}
+
+.gallery .photo-gallery{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.gallery .pic{
+    position: relative;
+    height: 230px;
+    border-radius: 10px;
+    border: 1px solid blue;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.gallery .pic img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.gallery .pic::before{
+    content: "PHOTO GALLERY";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f0e6d2;
+    font-size: 22px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -100px;
+    opacity: 0;
+    transform: .3s;
+    transition-delay: .2s;
+    z-index: 1;
+}
+
+.gallery .pic::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    width: 100%;
+    height: 0;
+    background-color: goldenrod;
+    transition: .3s;
+}
+.gallery .pic:hover::after{
+    height: 100%;
+}
+
+.gallery .pic:hover::before{
+    margin-top: 0;
+    opacity: 1;
+}
+
+.gallery #check1:checked ~ .gallery-container .photo-gallery .pic{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+    transition: .5s;
+}
+.gallery #check2:checked ~ .gallery-container .photo-gallery .Events{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+}
+.gallery #check2:checked ~ .gallery-container .photo-gallery .Bonding,
+.gallery #check2:checked ~ .gallery-container .photo-gallery .Outing{
+    opacity: 1;
+    transform: scale(0);
+    position: absolute;
+    transition: 0s;
+}
+
+.gallery #check3:checked ~ .gallery-container .photo-gallery .Bonding{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+}
+.gallery #check3:checked ~ .gallery-container .photo-gallery .Events,
+.gallery #check3:checked ~ .gallery-container .photo-gallery .Outing{
+    opacity: 1;
+    transform: scale(0);
+    position: absolute;
+    transition: 0s;
+}
+
+.gallery #check4:checked ~ .gallery-container .photo-gallery .Bonding{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+}
+.gallery #check4:checked ~ .gallery-container .photo-gallery .Events,
+.gallery #check4:checked ~ .gallery-container .photo-gallery .Bonding{
+    opacity: 1;
+    transform: scale(0);
+    position: absolute;
+    transition: 0s;
+}
+
+@media screen and (max-width:992px){
+    .gallery .photo-gallery{
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+    }
+}
+
+@media screen and (max-width:768px){
+    .gallery h1{
+        font-weight: normal;
+        position: relative;
+        font-size: 28px;
+        margin: 40px 0;
+    }
+
+    .gallery h3{
+        display: none;
+    }
+
+    .gallery label{
+        height: 100%;
+        font-size: 11px;
+        cursor: pointer;
+        transition: .5s;
+    }
+
+    .gallery .photo-gallery{
+        width: 80%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/*This is the css of testimonials*/
+
+.testimony{
+    height:100%;
+    font: normal 1em/1.5 "Open Sans";
+    background-color:white;
+    background-size:cover;
+    box-sizing:border-box;
+  }
+  .testimony a{
+    color:#ccc;
+  }
+  .testimony .container{
+    width:500px;
+    min-height:315px;
+    margin:0 auto;
+    position:relative;
+    padding-bottom:30px;
+    overflow:hidden;
+  }
+  .testimony h2{
+    color:#736861; 
+    margin:15px 0 5px;
+    text-shadow:0 1px rgba(255,255,255,0.5);
+  }
+  .testimony h6{
+    color:#928566; 
+    margin:0;
+  }
+  .testimony input[type="radio"] {
+  position: absolute;
+  width: 1px;
+  height: 1px; 
+  padding: 0;
+  margin: -1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  }
+  .testimony label{
+    display:block;
+    width:32%;
+    border: 4px solid yellow;
+    position:absolute;
+    bottom:5px;
+    cursor: pointer;
+    transition: border-color 0.3s linear;
+    left:0%;
+  }
+  
+  .testimony label.second{
+    left:34%;
+  }
+  .testimony label.third{
+    left:68%;
+  }
+  
+  .testimony blockquote{
+    margin:0;
+    padding:30px;
+    width:500px;
+    background-color: #DB532B;
+    color:white;
+    box-shadow: 0 5px 2px rgba(0,0,0,0.1);
+    position:relative;
+    transition: background-color 0.6s linear;
+  }
+  
+  .testimony blockquote:after { 
+    content: " "; 
+    height: 0; 
+    width: 0; 
+    position: absolute; 
+    top: 100%; 
+    border: solid transparent; 
+    border-top-color: #DA532B;
+    border-left-color:#DA532B;
+    border-width: 10px; 
+    left: 10%; 
+  } 
+  .testimony #second:checked ~ .two blockquote {
+    background-color:purple;
+  }
+  .testimony .two blockquote:after{
+    border: solid transparent; 
+    border-top-color: purple;
+    border-left-color:purple;
+    border-width: 10px;
+  }
+  .testimony #third:checked ~ .three blockquote{
+    background-color:#54885F;
+  }
+  .testimony .three blockquote:after{
+    border: solid transparent; 
+    border-top-color: #54885F;
+    border-left-color: #54885F;
+    border-width: 10px;
+  }
+  .testimony .quotes{
+    position:absolute;
+    color:rgba(255,255,255,0.5);
+    font-size:5em;
+  }
+  .testimony .leftq{
+    top:-25px;
+    left:5px;
+  }
+  .testimony .rightq{
+    bottom:-10px;
+    right:5px;
+  }
+  .testimony img{
+    float:left;
+    margin-right: 20px;
+  }
+  .testimony .slide{
+    position:absolute;
+    left:-100%;
+    opacity:0;
+    transition: all 0.6s ease-in;
+  }
+  
+  .testimony #first:checked ~ label.first {
+    border-width:6px;
+    border-color:#DB532B;
+  }
+  .testimony #second:checked ~ label.second {
+    border-width:6px; border-color:purple;
+  }
+  .testimony #third:checked ~ label.third {
+    border:6px solid #54885F;
+  }
+  
+  .testimony #first:checked ~ div.one {
+    left:0;
+    opacity:1;
+  }
+  .testimony #second:checked ~ div.two {
+    left:0;
+    opacity:1;
+  }
+  .testimony #third:checked ~ div.three {
+    left:0;
+    opacity:1;
+  }
+
+/* footer css */
+.footer-basic{
+    position: relative;
+    width: 92.5%;
+    background: gray;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.copyright{
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+    font-size: 10px;
+    margin-bottom: 0;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 20px;
+  }
+
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  .fa-facebook-official {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+
+  .fa-instagram{
+    background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+    color: white;
+      }
+    
+    .fa-youtube-play{
+    background: white;
+    color: red;
+    }
+
+#myBtn{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 25px;
+    border: none;
+    outline: none;
+    background-color: yellow;
+    color: red;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+#myBtn:hover{
+    background-color: red;
+    color: yellow;
+}

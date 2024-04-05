@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+    $(document).ready(function(){
+      // Add smooth scrolling to all links
+      $("a").on('click', function(event) {
+    
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+    
+          // Store hash
+          var hash = this.hash;
+    
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+    
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
+    </script>
+
+
+</head>
+<body>
+    
+    <div class="banner" id="home">
+        <div class="navbar">
+            <div class="logo">BERMEJO</div>
+            <ul>
+                <li><a href="#home">INFO</a></li>
+                <li><a href="#news">SKILLS</a></li>
+                <li><a href="#about">EXPERIENCES</a></li>
+                <li><a href="#gallery">GALLERY</a></li>
+                <li><a href="#footer">FOOTER</a></li>
+            </ul>
+            </div>
+
+            <div class="content">
+                <h1>Angelo Clark Bermejo</h1>
+                <p>I am currently a Student of PHINMA University of Iloilo. My course is BSIT Major in Web Development.</p>
+
+                <div class="buttons">
+                    <button type="button"><span></span>READ MORE </button>
+                    <button type="button"><span></span>WATCH MORE</button>
+                </div>
+
+            </div>
+
+        </div>
+
+ <!--This program is for news page-->
+
+ <div class="blog-section" id="news"> 
+
+    <div class="section-content">
+        
+        <div class="title">
+            <h2> SKILLS</h2>
+        </div>
+        <div class="cards">
+            <div class="card">
+
+                <div class="image-section">
+                    <img src="img/n1.jpg">
+</div>
+
+<div class="article">
+    <h4> E-SPORTS </h4>
+    <p> I am a player of Salvaxe Gnari Esports (an esports organization in PHINMA UI). Our team name is SVX Ignis and my role there is roamer.</p>
+    </div>
+
+    <div class="blog-view">
+        <a href="" class="button">Read More</a>
+    </div>
+
+</div>
+
+<div class="card">
+
+    <div class="image-section">
+        <img src="img/n2.jpg">
+    </div>
+
+    <div class="article">
+        <h4> MODDING NBA 2K14</h4>
+        <p> One of my skills is modding the PC version of NBA 2k14. You may find my NBA 2k14 mods by searching DARK2k on Facebook, where it now have 641 likes and 774 follows.</p>
+        </div>
+
+        <div class="blog-view">
+            <a href="https://www.facebook.com/profile.php?id=100091648277247" class="button"> Go to page</a>
+        </div>
+
+    </div>
+
+    </div>
+
+</div>
+</div>
+
+    <!--This code is for about page-->
+
+    <div class="about-section" id="about">
+        <div class="heading">
+            <h1>EXPERIENCES</h1>
+            <p>  </p>
+        </div>
+
+        <div class="catalog">
+            <section class="about">
+                <div class="about-image">
+                    <img src="img/exp.jpg">
+                </div>
+
+                <div class="about-content">
+                    <h2>CITEWEEK 2022</h2>
+                    <p>I took part in the CITEWEEK 2022 UI UX contest. We came in second place despite having little knowledge of how to create a website.</p>
+
+                    <a href="#" class="read-more"> Read More</a>
+                </div>
+            </section>
+        </div>
+
+
+
+    </div>
+
+     <!--This code is for gallery page-->
+
+     <div class="gallery" id="gallery">
+
+        <input type="radio" name="photos" id="check1" checked>
+        <input type="radio" name="photos" id="check2">
+        <input type="radio" name="photos" id="check3">
+        <input type="radio" name="photos" id="check4">
+
+        <div class="gallery-container">
+            <h1> GALLERY </h1>
+                <div class="top-content">
+                    <h3>Photo Gallery</h3>
+                    <label for="check1"> All Photos</label>
+                    <label for="check2"> SVX</label>
+                    <label for="check3"> CITEWEEK</label>
+                    <label for="check4"> MODS</label>
+                </div>
+
+                <div class="photo-gallery">
+
+                    <div class="pic Events">
+                        <img src="img/1p1.JPG">
+                    </div>
+
+                    <div class="pic Bonding">
+                        <img src="img/2p1.jpg">
+                    </div>
+
+                    <div class="pic Outing">
+                        <img src="img/3p1.jpg">
+                    </div>
+
+                    <div class="pic Events">
+                        <img src="img/1p2.JPG">
+                    </div>
+
+                    <div class="pic Bonding">
+                        <img src="img/2p2.jpeg">
+                    </div>
+
+                    <div class="pic Outing">
+                        <img src="img/3p2.jpg">
+                    </div>
+
+                    <div class="pic Events">
+                        <img src="img/1p3.JPG">
+                    </div>
+
+                    <div class="pic Bonding">
+                        <img src="img/2p3.JPG">
+                    </div>
+
+                    <div class="pic Outing">
+                        <img src="img/3p3.jpg">
+                    </div>
+
+                    <div class="pic Events">
+                        <img src="img/1p4.JPG">
+                    </div>
+
+                    <div class="pic Bonding">
+                        <img src="img/2p4.jpg">
+                    </div>
+
+                    <div class="pic Outing">
+                        <img src="img/3p4.jpg">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--this code is for footer-->
+    <div class="footer-basic" id="footer">
+        <footer>
+            <div class="social">
+                <a href="https://www.facebook.com"><i class="fa fa-facebook-official"></i></a>
+                <a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
+                <a href="https://twitter.com"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.youtube.com"><i class="fa fa-youtube-play"></i></a>
+            </div>
+            <p class="copyright">Managed and Created by 2K</p>
+        </footer>
+    </div>
+
+    <a href="#home" id="myBtn" title="Go to top">
+        <i class="fa fa-hand-pointer-o"></i>
+    </a>
+    
+    <script>
+        let mybutton = document.getElementById("myBtn");
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction(){
+if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+    mybutton.style.display="block";
+    } else{
+    mybutton.style.display="none"
+    }
+}
+
+    </script>
+
+
+
+
+
+
+</body>
+</html>
